@@ -1,58 +1,46 @@
-# VaultPay - Loan Approval Simulator with Shadcn/ui
+# 🏦 VaultPay: AI-Driven Loan Approval System
 
-A professional full-stack application demonstrating ML-assisted loan approval decisions using React + Shadcn/ui on the frontend and Flask + scikit-learn on the backend.
+**VaultPay** is a professional full-stack decision support system designed to bridge the gap between machine learning and financial underwriting. By leveraging a multi-model ensemble approach, it provides administrators with AI-backed confidence scores to make informed, data-driven lending decisions.
 
-## Features
+---
 
-✨ **Customer Portal**
-- Submit loan applications with personal & financial details
-- Track application status in real-time
-- View model accuracy metrics
+## 🚀 Key Features
 
-⚙️ **Admin Portal**
-- Review pending applications in a queue
-- Run AI-assisted predictions using 3 ML models:
-  - Random Forest
-  - Decision Tree
-  - Logistic Regression
-- View per-model predictions and confidence scores
-- Make informed approve/reject decisions
-- Add decision notes
+### 👤 Customer Portal
+* **Seamless Application:** Streamlined form for submitting personal and financial data.
+* **Real-time Tracking:** Live status updates on pending applications.
+* **Transparency:** View global model accuracy metrics to understand the "AI behind the curtain."
 
-🎨 **Modern UI**
-- Shadcn/ui inspired design with Tailwind CSS
-- Responsive grid layout
-- Clean data visualization
-- Professional card-based components
+### 🛡️ Admin Underwriting Dashboard
+* **Ensemble Predictions:** Compare outputs from three distinct ML models (**Random Forest**, **Decision Tree**, and **Logistic Regression**) simultaneously.
+* **Confidence Scoring:** View probability percentages to gauge the reliability of an AI verdict.
+* **Human-in-the-Loop:** Admins maintain final authority, with the ability to add decision notes to override or confirm AI suggestions.
 
-## Project Structure
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technologies |
+| **Frontend** | React 18, Tailwind CSS, Shadcn/ui, Axios |
+| **Backend** | Flask (Python), Flask-CORS |
+| **Machine Learning** | Scikit-learn, Pandas, Joblib |
+| **Models** | Random Forest, Decision Tree, Logistic Regression |
+
+---
+
+## 📐 Project Structure
 
 ```
 .
-├── models/                    # Trained model files
-│   ├── RandomForest_model.pkl
-│   ├── DecisionTree_model.pkl
-│   ├── LogisticRegression_model.pkl
-│   ├── scaler.pkl
-│   ├── label_encoders.pkl
-│   └── accuracies.pkl
-├── backend.py                 # Flask app serving ML models
-├── train.py                   # Model training script
-├── BankChurners.csv          # Training dataset
-└── frontend/                  # React + Shadcn/ui app
-    ├── public/
-    │   └── index.html
+├── models/                # Trained model files & encoders (.pkl)
+├── backend.py             # Flask REST API serving ML models
+├── train.py               # Model training & preprocessing script
+├── BankChurners.csv       # Training dataset
+└── frontend/              # React + Shadcn/ui application
     ├── src/
-    │   ├── App.jsx
-    │   ├── index.js
-    │   ├── index.css
-    │   └── pages/
-    │       ├── LoginPage.jsx
-    │       ├── CustomerDashboard.jsx
-    │       └── AdminDashboard.jsx
-    ├── package.json
-    ├── tailwind.config.js
-    └── postcss.config.js
+    │   ├── pages/         # Admin & Customer Dashboards
+    │   └── components/    # Shadcn/ui components
+    └── tailwind.config.js # Styling configuration
 ```
 
 ## Quick Setup
